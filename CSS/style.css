@@ -7,62 +7,75 @@
   --bgColor-2: #29303C;
   --padding: 8%;
 }
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   }
-
 html {
   font-family: "Josefin Sans", sans-serif;
   font-size: 16px;
   color: var(--lightColor);
   scroll-behavior: smooth;
 }
-
 .span-red {
   color: var(--darkColor);
 }
-
 .hovname:hover {
   color: yellow;
 }
-
 h2 {
   font-size: 2.2rem;
   letter-spacing: 0.12rem;
   cursor: pointer;
 }
-
 h1 {
   font-size: 4.65rem;
   margin: 1.7rem 0;
   text-align: center;
 }
-
 #about h1, .skills h1, .projects h1 {
   margin-bottom: 9rem;
 }
-
 h3 {
   font-size: 1.5rem;
   margin-bottom: 2.5rem;
   text-align: center;
 }
-
 h4 {
   font-size: 1.25rem;
   letter-spacing: 0.12rem;
   text-align: center;
 }
-
 p {
   color: var(--lightColor);
   letter-spacing: 1px;
   line-height: 1.8rem;
   font-size: 2rem;
 }
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+    }
+  }
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+    }
+  }
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+    }
+  }
 
 /* -------------  Start Home section ------------- */
 
@@ -73,8 +86,6 @@ p {
   display: flex;
   flex-direction: column;
 }
-
-
 nav {
   padding-top: 2.8rem;
   padding-left: var(--padding);
@@ -83,13 +94,11 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
-
 nav ul li {
   list-style: none;
   display: inline-block;
   margin: 0.8rem 1.5rem;
 }
-
 nav ul li a {
   color: var(--lightColor);
   text-decoration: none;
@@ -100,11 +109,9 @@ nav ul li a {
   -ms-transition: 0.4s;
   -o-transition: 0.4s;
 }
-
-nav ul li a:hover {
+nav ul li a:hover, .active {
   color: var(--darkColor);
 }
-
 .Btn1, .Btn2 {
   background-color: var(--darkColor);
   color: var(--lightColor);
@@ -124,7 +131,6 @@ nav ul li a:hover {
   -o-transition: 0.4s;
   border: 2px solid transparent;
 }
-
 .BTN {
   display: flex;
   flex-wrap: wrap;
@@ -133,19 +139,16 @@ nav ul li a:hover {
   justify-content: center;
   gap: 30px;
 }
-
 .Btn1:hover {
   color: yellow;
   border: 2px solid yellow;
   background-color: transparent;
 }
-
 .Btn2:hover {
   color: yellow;
   border: 2px solid yellow;
   background-color: transparent;
 }
-
 .content {
   flex-grow: 1;
   padding: 0 var(--padding);
@@ -153,19 +156,16 @@ nav ul li a:hover {
   align-items: center;
   justify-content: space-between;
 }
-
 #home .container-texts {
   position: relative;
   width: 40%;
 }
-
 .social {
   display: flex;
   justify-content: center;
   justify-items: center;
   margin-top: 2.5rem;
 }
-
 .social img {
   margin-right: 2rem;
   width: 2.6rem;
@@ -175,7 +175,6 @@ nav ul li a:hover {
   -ms-transition: 0.4s;
   -o-transition: 0.4s;
 }
-
 .social img:hover {
   transform: scale(1.2);
   -webkit-transform: scale(1.2);
@@ -239,144 +238,129 @@ nav ul li a:hover {
 
 /* -------------  Start About section ------------- */
 
-  #about {
-    background-color: var(--bgColor-1);
-    padding: var(--padding);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  #about .container-images {
-    width: 35%;
-  }
-
+#about {
+  background-color: var(--bgColor-1);
+  padding: var(--padding);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#about .container-images {
+  width: 35%;
+}
   #about .container-images img {
-    width: 90%;
+  width: 90%;
   }
-
-  #about .container-texts {
-    width: 60%;
-    text-align: center;
-  }
+#about .container-texts {
+  width: 60%;
+  text-align: center;
+}
   
 /* -------------  End About section ------------- */
 /* -------------  Start Skills section ------------- */
 
-  #skills {
-    background-color: var(--bgColor-2);
-    padding: var(--padding);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  #skills .container-images {
-    width: 35%;
-  }
-
-  #skills .container-images img {
-    width: 90%;
-  }
-
-  .content-skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-
-  .skill {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background-color: white;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    margin: 0 2rem 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#skills {
+  background-color: var(--bgColor-2);
+  padding: var(--padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-  .skill img {
-    width: 70%;
-  }
-
-  .skill img:hover {
-    transform: scale(1.5);
-    -webkit-transform: scale(1.5);
-    -moz-transform: scale(1.5);
-    -ms-transform: scale(1.5);
-    -o-transform: scale(1.5);
+#skills .container-images {
+  width: 35%;
 }
-
-  #skills .container-skills {
-    width: 40%;
-  }
+#skills .container-images img {
+  width: 90%;
+}
+.content-skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.skill {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: white;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  margin: 0 2rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skill img {
+  width: 70%;
+}
+.skill img:hover {
+  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -o-transform: scale(1.5);
+}
+#skills .container-skills {
+  width: 40%;
+}
 
 /* -------------  End Skills section ------------- */
 /* -------------  Start Projects section ------------- */
 
-  #projects {
-    background-color: var(--bgColor-1);
-    padding: var(--padding);
-  }
-
-  .box {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .card {
-    width: 300px;
-    background-color: var(--bgColor-2);
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-    padding: 1.3rem 2rem;
-    text-align: center;
+#projects {
+  background-color: var(--bgColor-1);
+  padding: var(--padding);
 }
-  
-  .card p {
-    margin-top: 20px;
-    font-size: 1rem;
-  }
-
-  .card em {
-    font-size: 3.12rem;
-    text-align: center;
-    color: var(--darkColor);
-    margin: 2rem;
-  }
+.box {
+  display: flex;
+  justify-content: space-between;
+}
+.card {
+  width: 300px;
+  background-color: var(--bgColor-2);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  padding: 1.3rem 2rem;
+  text-align: center;
+}
+.card p {
+  margin-top: 20px;
+  font-size: 1rem;
+}
+.card em {
+  font-size: 3.12rem;
+  text-align: center;
+  color: var(--darkColor);
+  margin: 2rem;
+}
 
 /* -------------  End Projects section ------------- */
 /* -------------  Start Footer section ------------- */
 
-  footer {
-    background-color: var(--bgColor-2);
-    padding: 2rem var(--padding);
-  }
-  
-  footer .content-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  footer .content-footer p {
-    font-size: 20px;
-  }
-  footer .content-footer .italic {
-    font-style: italic;
-  }
-
-  footer .content-footer .end {
-    font-size: 15px;
-    margin-top: 1.2rem;
-  }
+footer {
+  background-color: var(--bgColor-2);
+  padding: 2rem var(--padding);
+}
+footer .content-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .content-footer p {
+  font-size: 20px;
+}
+footer .content-footer .italic {
+  font-style: italic;
+}
+footer .content-footer .end {
+  font-size: 15px;
+  margin-top: 1.2rem;
+}
 
 /* -------------  End Footer section ------------- */
 /* -------------  Start Hamburger Menu section ------------- */
@@ -454,7 +438,6 @@ nav ul li a:hover {
     right: 0;
     height: 82px;
     background-color: var(--bgColor-1);
-    /* border-bottom: 1px solid transparent; */
     padding-top: 0;
     text-align: center;
     line-height: 40px;
@@ -565,7 +548,6 @@ nav ul li a:hover {
     right: 0;
     height: 82px;
     background-color: var(--bgColor-1);
-    /* border-bottom: 1px solid transparent; */
     padding-top: 0;
     text-align: center;
     line-height: 40px;
@@ -676,7 +658,6 @@ nav ul li a:hover {
     right: 0;
     height: 82px;
     background-color: var(--bgColor-1);
-    /* border-bottom: 1px solid transparent; */
     padding-top: 0;
     text-align: center;
     line-height: 40px;
@@ -781,37 +762,6 @@ nav ul li a:hover {
     top: 5rem;
     right: 1rem;
   }
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 82px;
-    background-color: var(--bgColor-1);
-    /* border-bottom: 1px solid transparent; */
-    padding-top: 0;
-    text-align: center;
-    line-height: 40px;
-    padding: 10px 10px;
-    z-index: 1;
-  }
-  nav ul {
-    display: none;
-    position: fixed;
-    width: 50vw;
-    height: 100vh;
-    background-color: var(--bgColor-1);
-    top: 0;
-    right: 0;
-  }
-  nav ul.is-active {
-    display: block;
-  }
-  nav ul li {
-    display: block;
-    text-align: center;
-    margin: 50px;
-  }
   #home .container-texts {
     width: 50%;
   }
@@ -837,7 +787,7 @@ nav ul li a:hover {
     justify-content: space-between;
   }
   #menu {
-    display: block;
+    display: none;
   }
   #about p {
     line-height: 30px;
@@ -846,15 +796,9 @@ nav ul li a:hover {
   #about h1 {
     margin-bottom: 30px;
   }
-  /* #about .container-images {
-    display: none;
-  } */
   #about .container-texts {
     width: 50%;
   }
-  /* #skills .container-images {
-    display: none;
-  } */
   #skills .container-skills {
     width: 50%;
     display: flex;
