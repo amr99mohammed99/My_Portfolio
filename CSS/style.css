@@ -11,6 +11,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
   }
 html {
   font-family: "Josefin Sans", sans-serif;
@@ -20,6 +24,7 @@ html {
 }
 .span-red {
   color: var(--darkColor);
+  text-shadow: 0 1px #816fca;
 }
 .hovname:hover {
   color: yellow;
@@ -345,11 +350,15 @@ footer {
   background-color: var(--bgColor-2);
   padding: 2rem var(--padding);
 }
+footer p.span-red,span.italic {
+  text-shadow: 0 0.5px #816fca;
+}
 footer .content-footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 footer .content-footer p {
   font-size: 20px;
