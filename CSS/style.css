@@ -140,8 +140,8 @@ nav ul li a:hover, .active {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-around;
   justify-content: center;
+  /* align-items: center; */
   gap: 30px;
 }
 .Btn1:hover {
